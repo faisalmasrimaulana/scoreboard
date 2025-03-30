@@ -6,8 +6,18 @@ html{
 body{
     background-color: rgb(35, 54, 74);
     color: snow;
+    font-family: "Kanit", sans-serif;
 }
 
-.block{
-    display: block;
+.score{
+    font-family: "Alfa Slab One", serif;
+    font-size: 6rem;
+}
+
+body>div{
+    height: 100vh;
+}
+
+#score-board{
+    width: 100vw;
 }

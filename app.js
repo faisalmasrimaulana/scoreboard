@@ -21,7 +21,7 @@ p1PlusButton.addEventListener('click', function(){
         if(p1Score === winPoint){
             isGameOver = true;
             setTimeout(() => {
-                winner.textContent = 'P1 IS THE WINNER'; 
+                winner.textContent = 'PLAYER 1 IS THE WINNER!!'; 
             }, 2000)      
         }
         p1Display.textContent = p1Score;
@@ -40,7 +40,7 @@ p2PlusButton.addEventListener('click', function(){
         p2Score += 1;
         if(p2Score === winPoint){
             isGameOver = true;
-            winner.textContent = 'P2 IS THE WINNER';
+            winner.textContent = 'PLAYER 2 IS THE WINNER!!';
         }
         p2Display.textContent = p2Score;
     }
