@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         <h1>Scoreboard</h1>
+        <h3>Max Point: <span id="display-win-point">5</span> </h3>
         <div id="score-board">
             <div id="player-1" class="player-style">
                 <h2>Player 1</h2>
@@ -24,7 +25,8 @@
             </div>
         </div>
         <div id="control">
-            <input type="number" id="win-point">
+            <input type="number" id="win-point" min='0'>
+            <button type="button" id="button-apply-point">Apply</button>
             <button id="reset">Reset</button>
         </div>
     </div>

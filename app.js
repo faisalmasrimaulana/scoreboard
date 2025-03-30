@@ -6,6 +6,8 @@ const p1MinButton = document.querySelector('#button-p1-min');
 const p2MinButton = document.querySelector('#button-p2-min');
 const resetButton = document.querySelector('#reset');
 const winPointInput = document.querySelector('#win-point');
+const buttonWinPoint = document.querySelector('#button-apply-point');
+const displayWinPoint = document.querySelector('#display-win-point');
 
 let p1Score = 0;
 let p2Score = 0;
@@ -60,10 +62,13 @@ function reset(){
     p2Display.textContent = p2Score; 
     isGameOver = false;
     winPointInput.value = null;
+    displayWinPoint.textContent = winPoint;
 }
 
 resetButton.addEventListener('click', reset)
 
-winPointInput.addEventListener('change', function(){
-    winPoint = parseInt(this.value);
+buttonWinPoint.addEventListener('click', function(){
+    winPoint = parseInt(winPointInput.value);
+    winPointInput.value = null;
+    displayWinPoint.textContent = winPoint;
 })
