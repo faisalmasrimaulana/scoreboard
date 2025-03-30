@@ -54,15 +54,16 @@ p2MinButton.addEventListener('click', function(){
     }
 })
 
+
 function reset(){
-    p1Score = 0;
-    p2Score = 0;
-    winPoint = 5;
-    p1Display.textContent = p1Score; 
-    p2Display.textContent = p2Score; 
-    isGameOver = false;
-    winPointInput.value = null;
-    displayWinPoint.textContent = winPoint;
+        p1Score = 0;
+        p2Score = 0;
+        winPoint = 5;
+        p1Display.textContent = p1Score; 
+        p2Display.textContent = p2Score; 
+        isGameOver = false;
+        winPointInput.value = null;
+        displayWinPoint.textContent = winPoint;
 }
 
 resetButton.addEventListener('click', reset)
@@ -70,5 +71,13 @@ resetButton.addEventListener('click', reset)
 buttonWinPoint.addEventListener('click', function(){
     winPoint = parseInt(winPointInput.value);
     winPointInput.value = null;
+    if (p1Score > 0 || p2Score > 0) {
+        p1Score = 0;
+        p2Score = 0;
+        isGameOver = false;
+        p1Display.textContent = p1Score;
+        p2Display.textContent = p2Score;
+    }
     displayWinPoint.textContent = winPoint;
+
 })
