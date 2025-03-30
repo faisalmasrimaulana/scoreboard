@@ -7,6 +7,7 @@ body{
     background-color: rgb(35, 54, 74);
     color: snow;
     font-family: "Kanit", sans-serif;
+    position: relative;
 }
 
 .score{
@@ -20,4 +21,11 @@ body>div{
 
 #score-board{
     width: 100vw;
+}
+
+#name{
+    position: absolute;
+    left: 0;
+    bottom:0;
+    color: rgba(255, 255, 255, 0.1);
 }
