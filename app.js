@@ -24,7 +24,7 @@ p1PlusButton.addEventListener('click', function(){
             isGameOver = true;
             const namaPlayer1 = player1.textContent;
             setTimeout(() =>{
-                winner.textContent = `${namaPlayer1.toUpperCase()} IS THE WINNER!!`;
+                winner.textContent = `${namaPlayer1.toUpperCase()} IS THE WINNER!!`; //memberikan nama
             })     
         }
         p1Display.textContent = p1Score;
