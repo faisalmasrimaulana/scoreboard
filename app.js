@@ -8,7 +8,9 @@ const resetButton = document.querySelector('#reset');
 const winPointInput = document.querySelector('#win-point');
 const buttonWinPoint = document.querySelector('#button-apply-point');
 const displayWinPoint = document.querySelector('#display-win-point');
-const winner = document.querySelector('#winner')
+const winner = document.querySelector('#winner');
+const player1 = document.querySelector('#player1');
+const player2 = document.querySelector('#player2');
 
 let p1Score = 0;
 let p2Score = 0;
@@ -20,9 +22,10 @@ p1PlusButton.addEventListener('click', function(){
         p1Score += 1;
         if(p1Score === winPoint){
             isGameOver = true;
-            setTimeout(() => {
-                winner.textContent = 'PLAYER 1 IS THE WINNER!!'; 
-            }, 2000)      
+            const namaPlayer1 = player1.textContent;
+            setTimeout(() =>{
+                winner.textContent = `${namaPlayer1.toUpperCase()} IS THE WINNER!!`;
+            })     
         }
         p1Display.textContent = p1Score;
     }
@@ -40,7 +43,10 @@ p2PlusButton.addEventListener('click', function(){
         p2Score += 1;
         if(p2Score === winPoint){
             isGameOver = true;
-            winner.textContent = 'PLAYER 2 IS THE WINNER!!';
+            const namaPlayer2 = player2.textContent;
+            setTimeout(() =>{
+                winner.textContent = `${namaPlayer2.toUpperCase()} IS THE WINNER!!`;
+            })
         }
         p2Display.textContent = p2Score;
     }
@@ -64,6 +70,8 @@ function reset(){
         winPointInput.value = null;
         displayWinPoint.textContent = winPoint;
         winner.textContent = '';
+        player1.textContent = 'Player 1';
+        player2.textContent = 'Player 2';
 }
 
 resetButton.addEventListener('click', reset)

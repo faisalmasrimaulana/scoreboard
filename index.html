@@ -19,7 +19,7 @@
         <h3>Max Point: <span id="display-win-point">5</span> </h3>
         <div id="score-board" class="d-flex justify-content-evenly row row-cols-sm-1 row-cols-lg-2 g-3 my-3">
             <div id="player-1" class="player-style text-center">
-                <p>Player 1</p>
+                <p contenteditable="true" id="player1">Player 1</p>
                 <span id="display-p1-score" class="score">0</span>
                 <div class="count">
                     <button id="button-p1-min" class="btn btn-light">-1</button>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div id="player-2" class="player-style text-center">
-                <p>Player 2</p>
+                <p contenteditable="true" id="player2">Player 2</p>
                 <span id="display-p2-score" class="score">0</span>
                 <div class="count">
                     <button id="button-p2-min" class="btn btn-light">-1</button>
@@ -37,7 +37,7 @@
         </div>
         <div id="control" class="d-flex flex-column gap-3">
             <div class="form">
-                <input type="number" id="win-point" min='0'>
+                <input type="number" id="win-point" min='0' placeholder="input maximum scores">
                 <button type="button" id="button-apply-point" class="btn btn-light">Apply</button>
             </div>
             <button id="reset" class="btn btn-dark">Reset</button>
